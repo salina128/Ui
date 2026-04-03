@@ -7,18 +7,22 @@
 <style>
 body {
     margin: 0;
-    background: #0f0f0f;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     color: white;
     padding: 10px;
+
+    /* 🔥 Telegram style background */
+    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
 }
 
 /* CARD */
 .card {
-    background: #1a1a1a;
+    background: rgba(255,255,255,0.08);
     padding: 15px;
     border-radius: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 /* BUTTON BASE */
@@ -28,40 +32,58 @@ body {
     border-radius: 12px;
     border: none;
     font-weight: bold;
-    color: white;
     font-size: 13px;
     margin: 6px 0;
+    color: white;
+
+    /* glass effect */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
 }
 
 /* ROW */
 .row {
     display: flex;
-    gap: 6px;
+    gap: 8px;
 }
 
 .row .btn {
     width: 50%;
 }
 
-/* COLORS */
-.green { background: linear-gradient(180deg,#00c853,#009624); }
-.red { background: linear-gradient(180deg,#ff5252,#c62828); }
-.pink { background: linear-gradient(180deg,#ff4da6,#c2185b); }
-.blue { background: linear-gradient(180deg,#42a5f5,#1565c0); }
-.purple { background: linear-gradient(180deg,#b388ff,#7b1fa2); }
+/* COLORS (Telegram style) */
+.green {
+    background: linear-gradient(180deg, #43e97b, #38f9d7);
+}
 
-/* HOVER */
+.blue {
+    background: linear-gradient(180deg, #4facfe, #00f2fe);
+}
+
+.red {
+    background: linear-gradient(180deg, #ff6a6a, #ff3d3d);
+}
+
+.pink {
+    background: linear-gradient(180deg, #ff4da6, #ff0080);
+}
+
+.purple {
+    background: linear-gradient(180deg, #b388ff, #7b1fa2);
+}
+
+/* CLICK EFFECT */
 .btn:active {
-    transform: scale(0.98);
+    transform: scale(0.97);
 }
 </style>
 </head>
 
 <body>
 
-<!-- DASHBOARD -->
+<!-- DASHBOARD CARD -->
 <div class="card">
-    🔥 <b>SHADOW MARKET v4.0 - OFFICIAL DASHBOARD</b> 🔥 <br><br>
+    🔥 <b>SHADOW MARKET v4.0 - OFFICIAL DASHBOARD</b> 🔥<br><br>
 
     Welcome back, <b>SHADOW</b><br><br>
 
@@ -77,18 +99,18 @@ body {
 <button class="btn green">🛒 BROWSE CC CATALOGUE</button>
 
 <div class="row">
-    <button class="btn red">👤 MY PROFILE</button>
-    <button class="btn pink">✨ DAILY REWARD</button>
+    <button class="btn green">👤 MY PROFILE</button>
+    <button class="btn green">✨ DAILY REWARD</button>
 </div>
 
 <div class="row">
-    <button class="btn blue">📦 TXN HISTORY</button>
-    <button class="btn purple">🎁 REFER & EARN</button>
+    <button class="btn green">📦 TXN HISTORY</button>
+    <button class="btn green">🎁 REFER & EARN</button>
 </div>
 
 <div class="row">
-    <button class="btn pink">🎟 REDEEM COUPON</button>
-    <button class="btn red">📞 LIVE SUPPORT</button>
+    <button class="btn green">🎟 REDEEM COUPON</button>
+    <button class="btn green">📞 LIVE SUPPORT</button>
 </div>
 
 </body>
