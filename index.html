@@ -10,12 +10,9 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     padding: 10px;
-
-    /* 🔥 Telegram style background */
     background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
 }
 
-/* CARD */
 .card {
     background: rgba(255,255,255,0.08);
     padding: 15px;
@@ -25,7 +22,6 @@ body {
     border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* BUTTON BASE */
 .btn {
     width: 100%;
     padding: 14px;
@@ -35,13 +31,10 @@ body {
     font-size: 13px;
     margin: 6px 0;
     color: white;
-
-    /* glass effect */
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.15);
 }
 
-/* ROW */
 .row {
     display: flex;
     gap: 8px;
@@ -51,24 +44,62 @@ body {
     width: 50%;
 }
 
-/* COLORS (Telegram style) */
 .green {
     background: linear-gradient(180deg, #43e97b, #38f9d7);
 }
 
-.blue {
-    background: linear-gradient(180deg, #4facfe, #00f2fe);
+.btn:active {
+    transform: scale(0.97);
 }
+</style>
+</head>
 
-.red {
-    background: linear-gradient(180deg, #ff6a6a, #ff3d3d);
+<body>
+
+<div class="card">
+    🔥 <b>SHADOW MARKET v4.0 - OFFICIAL DASHBOARD</b> 🔥<br><br>
+    Welcome back, <b>SHADOW</b><br><br>
+
+    💎 YOUR ACCOUNT OVERVIEW:<br>
+    💰 Available Balance: ₹0<br>
+    🆔 Member Serial: 6515766014<br>
+    👥 Market Size: 2 Members<br>
+    ⚡ Account Status: VERIFIED ✅
+</div>
+
+<!-- ✅ BUTTONS WITH ACTION -->
+
+<button class="btn green" onclick="sendData('browse')">🛒 BROWSE CC CATALOGUE</button>
+
+<div class="row">
+    <button class="btn green" onclick="sendData('profile')">👤 MY PROFILE</button>
+    <button class="btn green" onclick="sendData('reward')">✨ DAILY REWARD</button>
+</div>
+
+<div class="row">
+    <button class="btn green" onclick="sendData('txn')">📦 TXN HISTORY</button>
+    <button class="btn green" onclick="sendData('refer')">🎁 REFER & EARN</button>
+</div>
+
+<div class="row">
+    <button class="btn green" onclick="sendData('redeem')">🎟 REDEEM COUPON</button>
+    <button class="btn green" onclick="sendData('support')">📞 LIVE SUPPORT</button>
+</div>
+
+<!-- 🔥 TELEGRAM WEB APP SCRIPT -->
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<script>
+let tg = window.Telegram.WebApp;
+tg.expand();
+
+function sendData(action){
+    tg.sendData(action);
 }
+</script>
 
-.pink {
-    background: linear-gradient(180deg, #ff4da6, #ff0080);
-}
-
-.purple {
+</body>
+</html>.purple {
     background: linear-gradient(180deg, #b388ff, #7b1fa2);
 }
 
